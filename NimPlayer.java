@@ -50,5 +50,10 @@ public class NimPlayer{
     }
 }
 
+/*Your full name: Wenxing Xu
+  Your username : WENXINGX1
+  Github repository link: https://github.com/COMP90041/assignment-1-Medivhxx
+  */
+
 
 

@@ -4,7 +4,8 @@ public class Nimsys {
     public static boolean selection;
     public static void main(String[] args)
     {
-        System.out.println("Welcome to Nim\n");
+        System.out.println("Welcome to Nim");
+        System.out.println();
         System.out.println("Please enter a command to continue\n");
         Nimsys nimsys = new Nimsys();
         input = new Scanner(System.in);
@@ -54,10 +55,10 @@ public class Nimsys {
     public void startGame()
     {
         //Set up 2 new players name with input
-        System.out.print("Please enter Player 1's name: ");
+        System.out.print("Please enter Player 1's name : ");
         String Player_1 = input.next();
         NimPlayer Player1 = new NimPlayer(Player_1);
-        System.out.print("Please enter Player 2's name: ");
+        System.out.print("Please enter Player 2's name : ");
         String Player_2 = input.next();
         NimPlayer Player2 = new NimPlayer(Player_2);
 
@@ -70,9 +71,9 @@ public class Nimsys {
         while (againFlag)
         {
             //Set up the upper bound and total stones number
-            System.out.print("Enter upper bound: ");
+            System.out.print("Enter upper bound : ");
             int upper = input.nextInt();
-            System.out.print("Enter initial number of stones: ");
+            System.out.print("Enter initial number of stones : ");
             int stones = input.nextInt();
             System.out.println();
 
@@ -97,11 +98,11 @@ public class Nimsys {
                 // Judge who's turn with odd & even
                 if(j%2==0)
                 {
-                    System.out.printf("%s's turn. Enter stones to remove: ", Player1.getName());
+                    System.out.printf("%s's turn. Enter stones to remove : ", Player1.getName());
                 }
                 else
                 {
-                    System.out.printf("%s's turn. Enter stones to remove: ", Player2.getName());
+                    System.out.printf("%s's turn. Enter stones to remove : ", Player2.getName());
                 }
 
                 //Remove the stones and do the judgement
@@ -115,7 +116,7 @@ public class Nimsys {
                 else if (removeNum > stones)
                 {
                     System.out.printf(
-                            "Invalid attempt, only %d stones remaining! Try again: \n", stones);
+                            "Invalid attempt, only %d stones remaining! Try again :\n", stones);
                     isNotTryAgain = false;
                 }
                 else
@@ -161,24 +162,24 @@ public class Nimsys {
                 //Choose to print game or games for player1
                 if (Player1.getWins() <= 1)
                 {
-                    System.out.printf("%s won %d game out of %d played \n",
+                    System.out.printf("%s won %d game out of %d played\n",
                             Player1.getName(), Player1.getWins(), Player1.getGames());
                 }
                 else
                 {
-                    System.out.printf("%s won %d games out of %d played \n",
+                    System.out.printf("%s won %d games out of %d played\n",
                             Player1.getName(), Player1.getWins(), Player1.getGames());
                 }
 
                 //Choose to print game or games for player2
                 if (Player2.getWins() <= 1)
                 {
-                    System.out.printf("%s won %d game out of %d played \n",
+                    System.out.printf("%s won %d game out of %d played\n",
                             Player2.getName(), Player2.getWins(), Player1.getGames());
                 }
                 else
                 {
-                    System.out.printf("%s won %d games out of %d played \n",
+                    System.out.printf("%s won %d games out of %d played\n",
                             Player2.getName(), Player2.getWins(), Player1.getGames());
                 }
 
